@@ -7,7 +7,8 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+ name: 'Default'
+  #vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
@@ -16,8 +17,6 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
-  inputs:
-    versionSpec: '5.2.0'
 
 - task: NuGetCommand@2
   inputs:
