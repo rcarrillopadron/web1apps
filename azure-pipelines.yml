@@ -14,7 +14,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  rid: 'win-x64'
+  rid: 'win-x32'
 
 steps:
 - task: DotNetCoreCLI@2
