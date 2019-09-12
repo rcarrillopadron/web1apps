@@ -12,7 +12,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   webProject: 'src/Web1Apps/Web1Apps.csproj'
-  rid: 'win-x32'
+  rid: 'win-x86'
 
 steps:
 - task: DotNetCoreInstaller@0
