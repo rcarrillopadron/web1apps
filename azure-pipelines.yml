@@ -11,6 +11,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  solution: '**/*.sln' #src/Web1Apps/Web1Apps.csproj
 
 steps:
 - task: DotNetCoreInstaller@0
@@ -18,7 +19,7 @@ steps:
   inputs:
     version: 3.0.100-preview9-014004
 
-- script: dotnet build --configuration $(buildConfiguration) src/Web1Apps/Web1Apps.csproj
+- script: dotnet build --configuration $(buildConfiguration) $(solution)
   displayName: 'Building $(buildConfiguration)...'
 
 - task: DotNetCoreCLI@2
