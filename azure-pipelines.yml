@@ -28,7 +28,7 @@ steps:
   inputs:
     command: publish
     publishWebProjects: true
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) -r $(rid) --self-contained'
     zipAfterPublish: false
 
 - task: PublishBuildArtifacts@1
