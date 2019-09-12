@@ -11,7 +11,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  webProject: 'src/Web1Apps/Web1Apps.csproj'
+  webProject: '**/*.sln' #'src/Web1Apps/Web1Apps.csproj'
   rid: 'win-x86'
 
 steps:
