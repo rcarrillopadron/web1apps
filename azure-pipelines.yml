@@ -7,11 +7,12 @@ trigger:
 - master
 
 pool:
-  vmImage: 'vs2017-win2016'
+  vmImage: 'windows-latest'
 
 variables:
   buildConfiguration: 'Release'
   webProject: 'src/Web1Apps/Web1Apps.csproj'
+  rid: 'win-x32'
 
 steps:
 - task: DotNetCoreInstaller@0
@@ -27,8 +28,8 @@ steps:
   inputs:
     command: publish
     publishWebProjects: true
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    zipAfterPublish: true
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) -r $(rid) --self-contained'
+    zipAfterPublish: false
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publishing Build Artifacts...'
