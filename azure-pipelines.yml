@@ -16,7 +16,7 @@ steps:
 - task: DotNetCoreInstaller@0
   displayName: 'Installing .NET Core SDK...'
   inputs:
-    version: 3.0.0-preview9-19423-09
+    version: 3.0.0-preview9-014004
 
 - script: dotnet build --configuration $(buildConfiguration) src/Web1Apps/Web1Apps.csproj
   displayName: 'Building $(buildConfiguration)...'
