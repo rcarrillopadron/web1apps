@@ -15,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Web1Apps.Areas.Identity;
 using Web1Apps.Data;
+using Toolbelt.Blazor.Extensions.DependencyInjection;
 
 namespace Web1Apps
 {
@@ -31,6 +32,7 @@ namespace Web1Apps
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddI18nText<Startup>();
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));

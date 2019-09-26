@@ -1,6 +1,16 @@
 ﻿@page "/"
+@inject Toolbelt.Blazor.I18nText.I18nText I18nText
 
 <div class="text-center">
-    <div class="display-4">Welcome to Web1Lab</div>
+    <div class="display-4">@MyText.otro</div>
     <img src="img/logo.png" class="d-inline-block align-top" />
 </div>
+
+@functions{
+    I18nText.MyText MyText = new I18nText.MyText();
+
+    protected override async Task OnInitializedAsync()
+    {
+        MyText = await I18nText.GetTextTableAsync<I18nText.MyText>(this);
+    }
+}

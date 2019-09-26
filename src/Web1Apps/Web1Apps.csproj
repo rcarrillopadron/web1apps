@@ -11,6 +11,13 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.0-preview9.19424.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0-preview9.19423.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0-preview9.19423.6" />
+    <PackageReference Include="Toolbelt.Blazor.I18nText" Version="6.0.0" />
+  </ItemGroup>
+<ItemGroup>
+    <Watch Remove="i18ntext\MyText.en.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Watch Remove="i18ntext\MyText.es.json" />
+  </ItemGroup>
 </Project>
