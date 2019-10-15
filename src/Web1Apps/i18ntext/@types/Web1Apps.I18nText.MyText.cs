@@ -7,10 +7,16 @@ namespace Web1Apps.I18nText
 
         public string this[string key] => global::Toolbelt.Blazor.I18nText.I18nTextExtensions.GetFieldValue(this, key);
 
-        /// <summary>"Welcome to Web1Lab"</summary>
-        public string otro;
+        /// <summary>"Counter"</summary>
+        public string SidebarCounter;
+
+        /// <summary>"Fetch Data"</summary>
+        public string SidebarFetch;
+
+        /// <summary>"Home"</summary>
+        public string SidebarHome;
 
         /// <summary>"Welcome to your new app."</summary>
-        public string Welcome;
+        public string WelcomePage;
     }
 }

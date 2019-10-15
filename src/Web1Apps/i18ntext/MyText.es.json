@@ -1,4 +1,7 @@
 {
-    "Welcome": "Bienvenido",
-    "otro": "Bienvenido a Web1Lab"
+    "WelcomePage": "Bienvenido a tu nueva app",
+    "SidebarHome": "Home",
+    "SidebarCounter": "Contador",
+    "SidebarFetch": "Obtener Datos"
+    
 }
